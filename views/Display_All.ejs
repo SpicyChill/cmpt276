@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Display All Tokimon Info</title>
+</head>
+
+<body background="4.jpg">
+    <header style="color:pink;font-size:29px;">Tokimon Data Base</header>
+    <ul style="text-align: center;list-style-position: inside;">
+        <table>
+            <tr>
+                <th>Tokimon Name</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Fire</th>
+                <th>Water</th>
+                <th>Fly</th>
+                <th>Fight</th>
+                <th>Electric</th>
+                <th>Frozen</th>
+                <th>Trainer</th>
+                <th>Total</th>
+            </tr>
+            <% rows.forEach((r) => { %>
+                <tr>
+                    <td>
+                        <%= r.T_NAME %>
+                    </td>
+                    <td>
+                        <%= r.WEIGHT %>
+                    </td>
+                    <td>
+                        <%= r.HEIGHT %>
+                    </td>
+                    <td>
+                        <%= r.FIRE %>
+                    </td>
+                    <td>
+                        <%= r.WATER %>
+                    </td>
+                    <td>
+                        <%= r.FLY %>
+                    </td>
+                    <td>
+                        <%= r.FIGHT %>
+                    </td>
+                    <td>
+                        <%= r.ELECTRIC %>
+                    </td>
+                    <td>
+                        <%= r.FROZEN %>
+                    </td>
+                    <td>
+                        <%= r.TRAINER %>
+                    </td>
+                    <td>
+                        <%= r.TOTAL %>
+                    </td>
+
+                </tr>
+
+                <% }); %>
+        </table>
+
+        <a href="/" style="color:GREEN;font-size:20px;">HOME</a>
+
+    </ul>

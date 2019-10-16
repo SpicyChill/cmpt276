@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Display A Tokimon Info</title>
+</head>
+
+<body background="4.jpg">
+    <header style="color:pink;font-size:29px;">Display A Tokimon Info</header>
+    <ul style="text-align: center;list-style-position: inside;">
+        <table cellpadding="pixels" cellspacing="pixels">
+            <tr>
+                <th>Tokimon Name</th>
+
+                <th>Weight</th>
+
+                <th>Height</th>
+
+                <th>Fire</th>
+
+                <th>Water</th>
+
+                <th>Fly</th>
+
+                <th>Fight</th>
+
+                <th>Electric</th>
+
+                <th>Frozen</th>
+
+                <th>Trainer</th>
+                <tr>
+                    <td>
+                        <form class="" action="/Display_one" method="post">
+                            <input class="text-center" type="text" name="name" value="<% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                                <%= rows[0].T_NAME%>
+                                    <% } %>" />
+                            <button>Submit</button>
+                        </form>
+                    </td>
+                    </br>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].WEIGHT%>
+                                <% } else{ %>
+                                    weight
+                                    <% } %>
+                    </td>
+                    </br>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].HEIGHT%>
+                                <% } else{ %>
+                                    height
+                                    <% } %>
+                    </td>
+                    </br>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].FIRE%>
+                                <% } else{ %>
+                                    fire
+                                    <% } %>
+                    </td>
+                    </br>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].WATER%>
+                                <% } else{ %>
+                                    water
+                                    <% } %>
+                    </td>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].FLY%>
+                                <% } else{ %>
+                                    fly
+                                    <% } %>
+                    </td>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].FIGHT%>
+                                <% } else{ %>
+                                    fight
+                                    <% } %>
+                    </td>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].ELECTRIC%>
+                                <% } else{ %>
+                                    electric
+                                    <% } %>
+                    </td>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].FROZEN%>
+                                <% } else{ %>
+                                    frozen
+                                    <% } %>
+                    </td>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].TRAINER%>
+                                <% } else{ %>
+                                    trainer
+                                    <% } %>
+                    </td>
+                    </br>
+                    <td>
+                        <% if(typeof rows != 'undefined' && rows.length > 0){ %>
+                            <%= rows[0].TOTAL%>
+                                <% } else{ %>
+                                    total
+                                    <% } %>
+                    </td>
+                </tr>
+        </table>
+        <a href="/" style="color:GREEN;font-size:20px;">HOME</a>
+    </ul>

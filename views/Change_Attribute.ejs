@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Change Tokimon Attribute Info</title>
+</head>
+
+<body background="4.jpg">
+    <header style="color:pink;font-size:29px;">Tokimon Data Base</header>
+    <ul style="text-align: center;list-style-position: inside;">
+        <table>
+            <tr>
+                <th>Tokimon Name</th>
+                <th>Weight</th>
+                <th>Height</th>
+                <th>Fire</th>
+                <th>Water</th>
+                <th>Fly</th>
+                <th>Fight</th>
+                <th>Electric</th>
+                <th>Frozen</th>
+                <th>Trainer</th>
+            </tr>
+            <% rows.forEach((r) => { %>
+                <form class="" action="/Change_Attribute" method="post">
+                    <tr>
+                        <td>
+                            <input type="text" name="name" value="<%= r.T_NAME %>" readonly/>
+                        </td>
+                        <td>
+                            <input type="text" name="weight" value="<%= r.WEIGHT %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="height" value="<%= r.HEIGHT %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="fire" value="<%= r.FIRE %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="water" value="<%= r.WATER %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="fly" value="<%= r.FLY %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="fight" value="<%= r.FIGHT %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="electric" value="<%= r.ELECTRIC %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="frozen" value="<%= r.FROZEN %>" />
+                        </td>
+                        <td>
+                            <input type="text" name="trainer" value="<%= r.TRAINER %>" />
+                        </td>
+                        <td>
+                            <button>Submit</button>
+                        </td>
+                    </tr>
+                </form>
+                <% }); %>
+        </table>
+        <a href="/" style="color:GREEN;font-size:20px;">HOME</a>
+    </ul>
